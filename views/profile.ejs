@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <p>Welcome, <%= user.fullName %>!</p>
+        <p>Email: <%= user.email %></p>
+        <a href="/password/generate" class="btn btn-secondary">Generate Password</a>
+        <% if(user.twoFactorAuth.enabled) { %>
+            <p>Two-Factor Authentication: Enabled</p>
+            <a href='/2fa/disable' class='btn btn-warning'>Disable 2FA</a>
+        <% } else { %>
+            <a href='/profile/setup-2fa' class='btn btn-success'>Setup 2FA</a>
+        <% } %>
+        <a href="/auth/logout" class="btn btn-danger">Logout</a>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js'></script>
+    <script src='/js/setup2faHandler.js'></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verify Two-Factor Authentication</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class='container'>
+    <h1>Verify Two-Factor Authentication</h1>
+    <p>Scan the QR code with your Authenticator app and enter the token below.</p>
+
+    <div id='qrcode'>
+      <!-- QR Code Image will be added dynamically -->
+    </div>
+
+    <form id='verify-2fa-form'>
+      <div class='form-group'>
+        <label for='token'>Token:</label>
+        <input type='text' id='token' name='token' class='form-control' required>
+      </div>
+      <button type='submit' class='btn btn-primary'>Verify</button>
+    </form>
+
+    <div id='error-message' class='text-danger'></div>
+  </div>
+  <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js'></script>
+  <script src='/js/verify2faSetup.js'></script>
+</body>
+</html>

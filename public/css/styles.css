@@ -1,0 +1,39 @@
+/* Custom styles for EchoThePassword */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+/* Add more custom styles as needed */
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Additional styles can be added below */
+/* Example for form inputs */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'] {
+    margin-bottom: 20px;
+}
